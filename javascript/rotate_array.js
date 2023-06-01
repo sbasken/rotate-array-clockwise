@@ -1,5 +1,8 @@
 function rotateArray(arr, k) {
-  // type your code here
+  if (k > arr.length) {
+    k = k % arr.length;
+  }
+  return arr.slice(-k).concat(arr.slice(0, -k))
 }
 
 if (require.main === module) {
